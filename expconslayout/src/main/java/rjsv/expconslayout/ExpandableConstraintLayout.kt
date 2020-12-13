@@ -4,10 +4,10 @@ import android.animation.Animator
 import android.animation.TimeInterpolator
 import android.animation.ValueAnimator
 import android.content.Context
-import android.support.constraint.ConstraintLayout
-import android.support.v4.view.animation.FastOutSlowInInterpolator
 import android.util.AttributeSet
 import android.view.View
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import rjsv.expconslayout.enumerators.ExpandableConstraintLayoutListenerStatus
 import rjsv.expconslayout.enumerators.ExpandableConstraintLayoutListenerStatus.*
 import rjsv.expconslayout.enumerators.ExpandableConstraintLayoutStatus.*
