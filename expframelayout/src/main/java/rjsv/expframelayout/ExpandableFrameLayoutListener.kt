@@ -1,24 +1,24 @@
-package rjsv.expconslayout
+package rjsv.expframelayout
 
-import rjsv.expconslayout.enumerators.ExpandableConstraintLayoutStatus
+import rjsv.expframelayout.enumerators.ExpandableFrameLayoutStatus
 
 /**
  * @author [](mailto:rvfts@hotmail.com)
  * @version $Revision : 1 $
  */
 
-interface ExpandableConstraintLayoutListener {
+interface ExpandableFrameLayoutListener {
     /**
      * Notifies the start of the animation.
      * Sync from android.animation.Animator.AnimatorListener.onAnimationStart(Animator animation)
      */
-    fun onAnimationStart(status: ExpandableConstraintLayoutStatus)
+    fun onAnimationStart(status: ExpandableFrameLayoutStatus)
 
     /**
      * Notifies the end of the animation.
      * Sync from android.animation.Animator.AnimatorListener.onAnimationEnd(Animator animation)
      */
-    fun onAnimationEnd(status: ExpandableConstraintLayoutStatus)
+    fun onAnimationEnd(status: ExpandableFrameLayoutStatus)
 
     /**
      * Notifies the layout is going to open.

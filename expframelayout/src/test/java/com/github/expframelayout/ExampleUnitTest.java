@@ -1,4 +1,4 @@
-package com.github.expconslayout;
+package com.github.expframelayout;
 
 import org.junit.Test;
 

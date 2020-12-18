@@ -1,4 +1,4 @@
-package rjsv.expconslayout.enumerators
+package rjsv.expframelayout.enumerators
 
 /**
  * Description
@@ -7,7 +7,7 @@ package rjsv.expconslayout.enumerators
  * @version $Revision : 1 $
  */
 
-enum class ExpandableConstraintLayoutListenerStatus {
+enum class ExpandableFrameLayoutListenerStatus {
     PreOpen,
     PreClose,
     Opened,

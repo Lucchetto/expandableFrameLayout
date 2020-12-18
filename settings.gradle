@@ -1,2 +1,2 @@
-include ':expconslayout'
-rootProject.name = "expandableConstraintLayout"
+include ':expframelayout'
+rootProject.name = "expandableFrameLayout"

@@ -1,4 +1,4 @@
-package rjsv.expconslayout
+package rjsv.expframelayout
 
 import android.animation.Animator
 import android.animation.TimeInterpolator
@@ -6,11 +6,11 @@ import android.animation.ValueAnimator
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
-import androidx.constraintlayout.widget.ConstraintLayout
+import android.widget.FrameLayout
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
-import rjsv.expconslayout.enumerators.ExpandableConstraintLayoutListenerStatus
-import rjsv.expconslayout.enumerators.ExpandableConstraintLayoutListenerStatus.*
-import rjsv.expconslayout.enumerators.ExpandableConstraintLayoutStatus.*
+import rjsv.expframelayout.enumerators.ExpandableFrameLayoutListenerStatus
+import rjsv.expframelayout.enumerators.ExpandableFrameLayoutListenerStatus.*
+import rjsv.expframelayout.enumerators.ExpandableFrameLayoutStatus.*
 
 /**
  * Description
@@ -20,14 +20,14 @@ import rjsv.expconslayout.enumerators.ExpandableConstraintLayoutStatus.*
  * @version $Revision : 1 $
  */
 
-class ExpandableConstraintLayout @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(context, attrs, defStyleAttr) {
+class ExpandableFrameLayout @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout(context, attrs, defStyleAttr) {
 
     var animationDuration: Int = 0
     private val isVertical: Boolean
     private var expansion: Float = 0.toFloat()
     private val displacement: Float
     var interpolator: TimeInterpolator? = null
-    private var animationListener: ExpandableConstraintLayoutListener? = null
+    private var animationListener: ExpandableFrameLayoutListener? = null
     private var valueAnimator: ValueAnimator? = null
     private var currentStatus = IDLE
 
@@ -153,11 +153,11 @@ class ExpandableConstraintLayout @JvmOverloads constructor(context: Context, att
     }
 
     // Listener Related
-    fun setAnimationListener(listener: ExpandableConstraintLayoutListener) {
+    fun setAnimationListener(listener: ExpandableFrameLayoutListener) {
         this.animationListener = listener
     }
 
-    fun reportListenerStatus(status: ExpandableConstraintLayoutListenerStatus?) {
+    fun reportListenerStatus(status: ExpandableFrameLayoutListenerStatus?) {
         if (status != null && animationListener != null) {
             when (status) {
                 PreOpen -> animationListener!!.onPreOpen()
